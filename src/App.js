@@ -1,15 +1,17 @@
 import './App.css';
 import ButtonAppBar from './Components/Navigation/Navigation';
 import FullWidthTabs from './Components/Tabs/Tabs';
-import Box from '@material-ui/core/Box';
+import ImagePreview from './Components/ImagePreview/ImagePreview';
+
 function App() {
   return (
     <div className="App">
       <ButtonAppBar />
-      <Box>
+      <div className="App-header">
+        <ImagePreview/>
+        <br/>
         <FullWidthTabs/>
-        <FullWidthTabs/>
-      </Box>
+      </div>
     </div>
   );
 }
