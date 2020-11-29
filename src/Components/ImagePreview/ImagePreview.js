@@ -25,7 +25,7 @@ export default function MediaCard() {
 
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} >
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -33,7 +33,7 @@ export default function MediaCard() {
           title="Contemplative Reptile"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h5" component="h2" color="primary">
             Preview
           </Typography>
         </CardContent>
@@ -42,7 +42,7 @@ export default function MediaCard() {
         <Button size="small" color="primary">
           Color it
         </Button>
-        <Button size="small" color="primary">
+        <Button size="small" color="Secondary">
           Download
         </Button>
       </CardActions>
