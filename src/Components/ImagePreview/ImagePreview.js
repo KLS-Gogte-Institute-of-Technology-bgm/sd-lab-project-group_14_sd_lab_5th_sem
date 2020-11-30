@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import './ImageP.css';
 
+
 const useStyles = makeStyles({
   root: {
     marginBottom: 20,
@@ -20,16 +21,15 @@ const useStyles = makeStyles({
   },
 });
 
+
 export default function MediaCard() {
   const classes = useStyles();
-
-
   return (
     <Card className={classes.root} >
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="/static/images/cards/contemplative-reptile.jpg"
+          image= ""
           title="Contemplative Reptile"
         />
         <CardContent>

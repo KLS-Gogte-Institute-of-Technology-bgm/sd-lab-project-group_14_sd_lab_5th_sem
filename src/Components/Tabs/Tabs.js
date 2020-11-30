@@ -13,7 +13,6 @@ import UploadButtons from '../UploadComponent/UploadComponent';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-
   return (
     <div
       role="tabpanel"
@@ -56,6 +55,7 @@ export default function FullWidthTabs() {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
+
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -63,6 +63,8 @@ export default function FullWidthTabs() {
   const handleChangeIndex = (index) => {
     setValue(index);
   };
+
+  
 
   return (
     <div className={classes.root}>
@@ -75,7 +77,7 @@ export default function FullWidthTabs() {
           variant="fullWidth"
           aria-label="full width tabs example"
         >
-          <Tab label="Paste Url" {...a11yProps(0)} />
+          {/* <Tab label="Paste Url" {...a11yProps(0)} /> */}
           <Tab label="Upload Image" {...a11yProps(1)} />
 
           
@@ -87,10 +89,10 @@ export default function FullWidthTabs() {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-          <BasicTextFields/>
+        <UploadButtons/>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          <UploadButtons/>
+          <BasicTextFields />
         </TabPanel>
       </SwipeableViews>
     </div>
