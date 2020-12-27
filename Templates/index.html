@@ -6,10 +6,35 @@
 
 {% block body %}
 <div class="contents">
-    <h1>Task Master</h1>
     <br>
-    <img src="https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg" class="rounded float-left" alt="Before">
-    <img src="https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg" class="rounded float-right" alt="After">
+    <div class="row" style=" margin-top: 0pxs; margin: 10px;padding: 0px;align-content: right">
+        <div class="col-sm-6">
+            <div class="card" style="width: 32rem; margin-left: auto;">
+                <div class="card-body">
+                    <img src="https://cdn.mos.cms.futurecdn.net/5PMe5hr8tjSS9Nq5d6Cebe.jpg"
+                        class="rounded float-left" alt="Before" style="width: 30rem;">
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-sm-6" >
+            <div class="card" style="width: 32rem;">
+                <div class="card-body">
+                    <img src="https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg"
+                        class="rounded float-left" alt="Before" style="width: 30rem;">
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    <div style="align-content: center;  text-align: center;">
+        <div class="form">
+            <form action="/" method="POST">
+                <input type="text" name='content' id='content'>
+                <input type="submit" value="Add Image">
+            </form>
+        </div>
+    </div>
     {% if tasks|length < 1 %}
     <h4>Enter URL of a Black and white Image </h4>
     {% else %}
@@ -37,11 +62,6 @@
         {% endfor %}
     </table>
     {% endif %}
-    <div class="form">
-        <form action="/" method="POST">
-            <input type="text" name='content' id='content'>
-            <input type="submit" value="Add Image">
-        </form>
-    </div>
+
 </div>
 {% endblock %}

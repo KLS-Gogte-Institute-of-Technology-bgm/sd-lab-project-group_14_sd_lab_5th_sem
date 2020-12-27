@@ -1,7 +1,10 @@
 body{
-    margin: auto;
-    padding: 0%;
+    background: #ecf0f1;
 }
-.content{
-    text-align: center;
+
+.row{
+    margin-top: auto;
+    margin: 1000px;
+    padding: 10px;
+    align-content: center;
 }

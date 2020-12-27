@@ -14,3 +14,8 @@ client.file(path)
 foo = client.dir("data://.my/foo")
 foo.file(img_file).putFile("/path/to/myfile")
 
+
+
+
+
+

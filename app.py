@@ -29,11 +29,12 @@ def index():
             db.session.commit()
 
             input = {
-            "image": task_content
+            "image": task_content,
+            "location": "data://.algo/temp/{{task.id}}.png"
             }
             client = Algorithmia.client('simLUQYP0xwbUAfli3j4JkeqW6/1')
             algo = client.algo('deeplearning/ColorfulImageColorization/1.1.14')
-            algo.set_options(timeout=300) # optional
+            algo.set_options(timeout=3000) # optional
             print(algo.pipe(input).result)
 
             # uploads = os.path.join(current_app.root_path, app.config['UPLOAD_FOLDER'])
