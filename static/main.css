@@ -1,0 +1,10 @@
+body{
+    background: #ecf0f1;
+}
+
+.row{
+    margin-top: auto;
+    margin: 1000px;
+    padding: 10px;
+    align-content: center;
+}
