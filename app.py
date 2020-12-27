@@ -4,6 +4,8 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import Algorithmia
 import asyncio
+from im import img
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///test.db'
@@ -60,19 +62,19 @@ def delete(id):
 
 @app.route('/update/<int:id>',methods=['POST','GET'])
 def update(id):
-    task = Painter.query.get_or_404(id)
+    # task = Painter.query.get_or_404(id)
 
-    if request.method == 'POST':
-        task.content = request.form['content']
+    # if request.method == 'POST':
+    #     task.content = request.form['content']
 
-        try:
-            db.session.commit()
-            return redirect('/')
-        except:
-            return 'cannot update'
-    else:
-        return render_template('update.html',task=task)
-
+    #     try:
+    #         db.session.commit()
+    #         return redirect('/')
+    #     except:
+    #         return 'cannot update'
+    # else:
+    #     return render_template('update.html',task=task)
+    pass
 @app.route('/signin',methods=['POST','GET'])
 def signin():
     if request.method == 'POST':
