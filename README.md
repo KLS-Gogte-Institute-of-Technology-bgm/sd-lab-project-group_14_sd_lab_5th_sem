@@ -1,4 +1,5 @@
 # Painter.ai:
+By: Batch 14
 
  ## Problem Statement 
 
@@ -17,6 +18,17 @@
      User uploads image through URL or Local storage device 
      Click on GO 
      Then download the colorized image and can save it to its local storage device 
+     
+     
+ ## Requrirements 
+ 
+    User can be able to create account/register easily by filling all the necessary details. 
+    User should be sign successfully by using username and password.
+    User will be able to upload images though URL and Local Storage 
+    System will allow N no. of users to Use the application N no. of times 
+    System will allow user to download the colorized image and save it to local storage 
+           
+ 
   
  ## Artifacts 
   
