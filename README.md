@@ -62,10 +62,10 @@
   
   ## Authors 
   
-    SUJAY AMBERKAR	               2GI18CS164 
-    TANAY SINGH                   2GI18CS167
+    SUJAY AMBERKAR	                   2GI18CS164 
+    TANAY SINGH                        2GI18CS167
     TANZEEL ABID KHAN 	           2GI18CS169
-    VAISHNAVI TIWARI	             2GI18CS174
+    VAISHNAVI TIWARI	           2GI18CS174
 
   
   
