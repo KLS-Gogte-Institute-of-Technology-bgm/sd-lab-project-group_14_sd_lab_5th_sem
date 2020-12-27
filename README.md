@@ -21,6 +21,29 @@
  ## Artifacts 
   
   ### Class Diagram 
+  ![Class Diagram ](Artifact/SD_LAB_Class.jpg)
+  
+  
+  ### Activity Diagram 
+  ![Activity Diagram ](Artifact/SD_LAB aCTIVITY.jpg)
+  
+  
+  ### Use Case Diagrm 
+  ![Use Case Diagram](Artifact/Image Colourization Use Case Diagram .jpg)
+  
+  
+  ### ER Diagram 
+  ![ER DIagram](Artifact/SD_LAB_ER.jpeg)
+  
+  
+  ### Sequence Diagram 
+  ![Sequence Diagram](Artifact/sequence Diagram.jpeg)
+  
+  
+  
+  ## Conclusion 
+  
+  
   
  
 
