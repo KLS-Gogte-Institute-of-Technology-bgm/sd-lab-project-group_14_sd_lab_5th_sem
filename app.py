@@ -28,7 +28,7 @@ def index():
         try:
             db.session.add(new_task)
             db.session.commit()
-
+    # Through link
             import requests
             r = requests.post(
                 "https://api.deepai.org/api/colorizer",
@@ -37,9 +37,10 @@ def index():
                 },
                 headers={'api-key': 'd98c8a77-a695-42a1-8f50-c08bb46509e1'}
             )
+
             res = r.json()
             output = res['output_url']
-            print(output)
+            
             tasks = Painter.query.order_by(Painter.date_created).all()
             return render_template('index.html',tasks=tasks,output=output)
         except:
