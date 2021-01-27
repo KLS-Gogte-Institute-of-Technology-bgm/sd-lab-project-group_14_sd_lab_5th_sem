@@ -14,7 +14,7 @@
                     
                 {% for task in tasks %}
                 <!-- bw -->
-                    <img src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-after/Landscape-BW.jpg"
+                    <img src={{task.content}}
                         class="rounded float-left" alt="Before" style="width: 30rem; ">                   
                 {% endfor %}
                 </div>
@@ -25,8 +25,8 @@
             <div class="card" style="width: 32rem;">
                 <div class="card-body">
                     <!-- color -->
-                    <img id='after' src=""
-                        class="rounded float-left" alt="After" style="width: 30rem;" onclick="this.src='https://api.deepai.org/job-view-file/7099f610-5f8e-4d2b-90e2-4969509204fa/outputs/output.jpg'" >
+                    <img id='after' src={{task.output}}
+                        class="rounded float-left" style="width: 30rem;" >
                 </div>
             </div>
         
@@ -62,11 +62,11 @@
                 <!-- bw -->
                 <td><img src={{ task.content }} alt="" width="100px"></td>
                 <!-- color -->
-                <td><img src="https://api.deepai.org/job-view-file/7099f610-5f8e-4d2b-90e2-4969509204fa/outputs/output.jpg" alt="" width="100px"></td>
+                <td><img src={{ouput}} alt="" width="100px"></td>
                 <td>
                     <a href="/delete/{{task.id}}" style="width: 20px;"><button type="button" class="btn btn-primary">Delete</button></a>
                     <br><br>
-                    <a href="https://api.deepai.org/job-view-file/7099f610-5f8e-4d2b-90e2-4969509204fa/outputs/output.jpg" style="width: 20px;" download="color.png"><button type="button" class="btn btn-primary">Download</button></a>
+                    <a href={{output}} style="width: 20px;" download="color.png"><button type="button" class="btn btn-primary">Download</button></a>
                 </td>
             </tr>
         {% endfor %}
