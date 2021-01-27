@@ -39,7 +39,9 @@ def index():
             )
             res = r.json()
             output = res['output_url']
-            return redirect('/')
+            print(output)
+            tasks = Painter.query.order_by(Painter.date_created).all()
+            return render_template('index.html',tasks=tasks,output=output)
         except:
             return ' ERROR !!'
     else:
