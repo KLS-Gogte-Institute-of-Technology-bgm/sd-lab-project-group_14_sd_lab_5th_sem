@@ -25,23 +25,20 @@ def index():
     if request.method == 'POST':
         task_content = request.form['content']
         new_task = Painter(content=task_content)
-        
         try:
             db.session.add(new_task)
             db.session.commit()
 
-            input = {
-            "image": task_content,
-            "location": "data://.algo/temp/{{task.id}}.png"
-            }
-            client = Algorithmia.client('simLUQYP0xwbUAfli3j4JkeqW6/1')
-            algo = client.algo('deeplearning/ColorfulImageColorization/1.1.14')
-            algo.set_options(timeout=3000) # optional
-            print(algo.pipe(input).result)
-
-            # uploads = os.path.join(current_app.root_path, app.config['UPLOAD_FOLDER'])
-            # send_from_directory(directory=uploads, filename=filename)
-
+            import requests
+            r = requests.post(
+                "https://api.deepai.org/api/colorizer",
+                data={
+                    'image': {task_content},
+                },
+                headers={'api-key': 'd98c8a77-a695-42a1-8f50-c08bb46509e1'}
+            )
+            res = r.json()
+            output = res['output_url']
             return redirect('/')
         except:
             return ' ERROR !!'
@@ -60,21 +57,6 @@ def delete(id):
     except:
         return 'Not deleted'
 
-@app.route('/update/<int:id>',methods=['POST','GET'])
-def update(id):
-    # task = Painter.query.get_or_404(id)
-
-    # if request.method == 'POST':
-    #     task.content = request.form['content']
-
-    #     try:
-    #         db.session.commit()
-    #         return redirect('/')
-    #     except:
-    #         return 'cannot update'
-    # else:
-    #     return render_template('update.html',task=task)
-    pass
 @app.route('/signin',methods=['POST','GET'])
 def signin():
     if request.method == 'POST':
