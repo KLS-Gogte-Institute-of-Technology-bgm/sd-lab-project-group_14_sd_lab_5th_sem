@@ -20,7 +20,8 @@ class Painter(db.Model):
     def __repr__(self):
         return '<Task %r>' % self.id
 
-@app.route('/',methods=['POST','GET'])
+
+@app.route('/home', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
         task_content = request.form['content']
@@ -56,14 +57,14 @@ def delete(id):
     try:
         db.session.delete(task_to_delete)
         db.session.commit()
-        return redirect('/')
+        return redirect('/home')
     except:
         return 'Not deleted'
 
-@app.route('/signin',methods=['POST','GET'])
+@app.route('/',methods=['POST','GET'])
 def signin():
     if request.method == 'POST':
-        return redirect('/')
+        return redirect('/home')
         
     return render_template('signin.html')
 
